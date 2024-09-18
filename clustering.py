@@ -20,7 +20,7 @@ def clustering_analyse(file_path):
     data_scaled = scaler.fit_transform(data_encoded)
 
     # 1. Clustering avec K-Means
-    kmeans = KMeans(n_clusters=4, random_state=42)  # Vous pouvez changer le nombre de clusters
+    kmeans = KMeans(n_clusters=3, random_state=42)  # Vous pouvez changer le nombre de clusters
     kmeans_labels = kmeans.fit_predict(data_scaled)
 
     # 2. Clustering avec DBSCAN avec paramètres modifiés

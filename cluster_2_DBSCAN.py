@@ -16,7 +16,7 @@ scaler = StandardScaler()
 data_scaled = scaler.fit_transform(data[['age', 'revenu']])  # Nous ne normalisons que les colonnes 'age' et 'revenu'
 
 # 3. Clustering avec DBSCAN (ajuster les paramètres eps et min_samples)
-dbscan = DBSCAN(eps=0.3, min_samples=30)  # Essayez de réduire eps et augmenter min_samples
+dbscan = DBSCAN(eps=0.12, min_samples=10)  # Essayez de réduire eps et augmenter min_samples
 data['cluster'] = dbscan.fit_predict(data_scaled)
 
 # Vérifiez l'ajout de la colonne 'cluster'
